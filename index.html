@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desvita Natasya</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- BG 1 : full screen --
+
+  <!-- BG 2 : artwork kertas (TIDAK ZOOM) -->
+  <!-- BG 2 : KERTAS -->
+<div class="bg-front">
+  <div class="paper-wrapper">
+    <img src="assets/background/bg2.webp" alt="Kertas">
+  </div>
+</div>
+
+
+  <!-- Dekorasi -->
+
+  <!-- AUDIO -->
+<audio id="bgMusic" src="assets/audio/music.mp3"></audio>
+
+<!-- BUTTON PEMICU -->
+
+<button id="openMessage" class="open-btn">Buka Pesan</button>
+
+<!-- WINDOW 1 -->
+<div class="modal hidden" id="modalMessage">
+  <div class="modal-content">
+    <h2 id="modalHeader">Happy Bday Ucok 💌</h2>
+    <img src="assets/bunga/flower.webp" class="flower-decor">
+
+    <div class="modal-body" id="typingText"></div>
+
+    <button id="replyBtn" class="btn hidden">Balas Pesan</button>
+  </div>
+</div>
+
+<!-- WINDOW 2 -->
+<div class="modal hidden" id="modalReply">
+  <div class="modal-content">
+    <h2>Balas Pesan</h2>
+
+    <textarea id="replyText" placeholder="Tulis pesanmu di sini..."></textarea>
+
+    <button id="sendBtn" class="btn">Kirim Pesan</button>
+  </div>
+</div>
+  <!-- IMAGE SURPRISE --> 
+
+
+  <img src="assets/bunga/flower.webp" class="bunga">
+<img src="assets/kupu/butterfly.webp" class="kupu">
+<img src="assets/kupu/butterfly.webp" class="kupu1">
+
+
+<div class="image hidden" id="image1">
+  <img src="assets/surprise/surprise1.jpeg" alt="Surprise 1">
+</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

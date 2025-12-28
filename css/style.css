@@ -1,0 +1,267 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+
+/* BG 1 - FULL SCREEN */
+
+/* BG 2 - ARTWORK (ANTI ZOOM & ANTI CROP) */
+/* BG 2 - KERTAS DENGAN SAMPING FULL */
+.bg-front {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  /* warna samping (ambil warna pinggir kertas) */
+  background-color: #e6d8c5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pembungkus kertas */
+.paper-wrapper {
+  height: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 3 / 4;   /* RASIO KERTAS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gambar kertas */
+.paper-wrapper img {
+  height: 100%;
+  width: auto;
+
+  object-fit: contain;
+}
+
+
+/* ================= BUKU ================= */
+
+
+
+/* ================= BUNGA ================= */
+
+.bunga {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  z-index: 1;
+
+  transform-origin: bottom center;
+  animation: goyang 6s ease-in-out infinite;
+}
+
+@keyframes goyang {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); -webkit-transform: rotate(5deg); -moz-transform: rotate(5deg); -ms-transform: rotate(5deg); -o-transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -ms-transform: rotate(-5deg); -o-transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ================= KUPU-KUPU ================= */
+
+.kupu {
+  position: absolute;
+  width: 80px;
+  z-index: 3;
+
+  animation:
+    fly 12s linear infinite,
+    kepak 0.6s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0%   { left: -100px; top: 30%; }
+  25%  { top: 25%; }
+  50%  { left: 50%; top: 15%; }
+  75%  { top: 25%; }
+  100% { left: 110%; top: 30%; }
+}
+
+@keyframes kepak {
+  0%   { transform: scaleY(1); }
+  50%  { transform: scaleY(0.85); }
+  100% { transform: scaleY(1); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .book {
+    width: 230px;
+    height: 300px;
+  }
+
+
+  .bg-front img {
+    width: 95%;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* BUTTON PEMICU */
+.open-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 175px;
+  padding: 12px 20px;
+  background: #e8d8c3;
+  color: #6b4a2d;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 420px;
+  max-height: 70vh;
+  background: #f3e7d8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.modal-content h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.flower-decor {
+     display: block;
+     margin: 0 auto 15px auto;
+     width: 125px;
+     animation: goyang 8s ease-in-out infinite;
+     -webkit-animation: goyang 8s ease-in-out infinite;
+}
+
+@keyframes goyang {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); -webkit-transform: rotate(5deg); -moz-transform: rotate(5deg); -ms-transform: rotate(5deg); -o-transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -ms-transform: rotate(-5deg); -o-transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* BODY TEXT */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a3a2a;
+  margin-bottom: 15px;
+}
+
+/* TEXTAREA */
+textarea {
+  resize: none;
+  height: 120px;
+  padding: 10px;;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.btn {
+  background: #e8d8c3;
+  color: #6b4a2d;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ .bunga {
+    width: 110px;
+    animation-duration: 8s;
+  }
+
+  .kupu {
+    width: 50px;
+    animation:
+      fly 10s linear infinite,
+      kepak 0.8s ease-in-out infinite;
+  }
+
+  .kupu1 {
+    width: 50px;
+    animation:
+      fly 10s linear infinite,
+      kepak 0.8s ease-in-out infinite;
+  }
+
+  .foto1 {
+    position: absolute;
+    width: 80px;
+    top: 20%;
+    left: 15%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .foto2 {
+    position: absolute;
+    width: 80px;
+    top: 20%;
+    right: 15%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .foto3 {
+    position: absolute;
+    width: 80px;
+    bottom: 20%;
+    left: 15%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .image1 {
+    position: absolute;
+    width: 80px;
+    bottom: 20%;
+    right: 15%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
